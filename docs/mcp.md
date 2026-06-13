@@ -37,9 +37,9 @@ The server provides 15 tools for querying MTG pricing data:
 
 | Tool                | Description                                            | Parameters                          |
 | ------------------- | ------------------------------------------------------ | ----------------------------------- |
-| `find_best_price`   | Find the cheapest in-stock price across all retailers  | `product_id`                        |
+| `find_best_price`   | Find the cheapest in-stock or pre-order price           | `product_id`                        |
 | `compare_prices`    | Compare a product's current price across all retailers | `product_id`                        |
-| `get_price_history` | Get historical price timeseries                        | `product_id`, `retailer_id`, `days` |
+| `get_price_history` | Get compact daily history and recorded range            | `product_id`, `retailer_id`, `days` |
 | `get_price_range`   | Get lowest, highest, and average recorded price        | `product_id`, `days`                |
 
 ### Deals & Discovery
@@ -62,7 +62,7 @@ The server provides 15 tools for querying MTG pricing data:
 
 ## Output Schemas
 
-All tools include `outputSchema` declarations and return `structuredContent` for typed responses. Each response includes `boostermage_url` fields for direct linking to products and retailers on the website.
+All tools include `outputSchema` declarations and return `structuredContent` for typed responses. The MCP server wraps the public REST API's safe `boostermage_url` fields rather than constructing or exposing retailer destinations. Retailer and affiliate destination URLs are deliberately omitted at the API source.
 
 ## Annotations
 
