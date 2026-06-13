@@ -94,6 +94,11 @@ Boostermage is published on the [MCP Registry](https://registry.modelcontextprot
 
 This documentation is maintained at **https://github.com/fmacpro/boostermage**.
 
+## Policies
+
+- [Terms of Service](./TERMS.md)
+- [Privacy & Analytics](https://boostermage.com/privacy)
+
 ---
 
 _Boostermage is an independent UK MTG sealed product price comparison site. Not affiliated with Wizards of the Coast or any retailer._
