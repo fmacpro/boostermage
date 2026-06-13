@@ -50,6 +50,9 @@ curl "https://api.boostermage.com/api/v1/products/price-drops/list?hours=24&limi
 
 **Rate limits:** 100 req/min (anonymous), 1000 req/min (with API key)
 
+API listing links use Boostermage product URLs with an optional `retailer`
+selector. Retailer destination and affiliate URLs are not exposed.
+
 ### 🤖 MCP Server
 
 **Endpoint:** `https://mcp.boostermage.com/mcp`
