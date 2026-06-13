@@ -4,6 +4,19 @@
 
 A read-only REST API serving MTG sealed product pricing data. All endpoints return JSON. Authentication is optional (provides higher rate limits).
 
+## Link Policy
+
+The API never exposes retailer destination URLs or affiliate links. Product and
+listing responses use `boostermage_url`; listing-specific links include the
+relevant retailer selector:
+
+```text
+https://boostermage.com/products/<productId>?retailer=<retailerId>
+```
+
+Set responses may also include `set_url`, and retailer responses link to the
+Boostermage retailer directory.
+
 ## Authentication
 
 Include an API key via the `Authorization` header:
@@ -58,6 +71,10 @@ GET /api/v1/products/:id/details
 
 Returns rich product information from the official catalog, including description, contents, and features.
 
+Search terms are matched independently across product names, IDs, and set names.
+Common catalogue descriptors such as `sealed products` do not prevent otherwise
+valid matches.
+
 #### Price History
 
 ```
@@ -71,13 +88,26 @@ GET /api/v1/products/:id/history
 
 Returns time-series price observations for a product.
 
+#### Compact Price History
+
+```
+GET /api/v1/products/:id/history-summary
+```
+
+Uses the same `retailer` and `days` parameters as the raw history endpoint.
+Returns the recorded low, high, average, coverage dates, observation count, and
+one aggregate point per day. This is the recommended endpoint for assistants,
+charts, and other consumers that do not need every individual scrape
+observation.
+
 #### Best Price
 
 ```
 GET /api/v1/products/:id/best-price
 ```
 
-Returns the cheapest in-stock price across all retailers.
+Returns the cheapest currently available price across all retailers, including
+in-stock and pre-order listings.
 
 #### Price Range
 
