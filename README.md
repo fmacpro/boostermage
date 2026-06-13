@@ -6,7 +6,7 @@ Boostermage tracks sealed Magic: The Gathering product prices across UK retailer
 
 ## Features
 
-- **Price comparison** — Compare prices across {{RETAILER_COUNT}} UK retailers for {{PRODUCT_COUNT}} tracked products
+- **Price comparison** — Compare prices across 54 UK retailers for 383 tracked products
 - **Price history** — Track price trends over time (up to 2 years of data)
 - **Deals & price drops** — Automatically detected products priced below market average
 - **Restock alerts** — Products that recently came back in stock
