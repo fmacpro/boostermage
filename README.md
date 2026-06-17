@@ -6,7 +6,7 @@ Boostermage tracks sealed Magic: The Gathering product prices across UK retailer
 
 ## Features
 
-- **Price comparison** — Compare prices across 54 UK retailers for 383 tracked products
+- **Price comparison** — Compare prices across 67 UK retailers for 385 tracked products
 - **Price history** — Track price trends over time (up to 2 years of data)
 - **Deals & price drops** — Automatically detected products priced below market average
 - **Restock alerts** — Products that recently came back in stock
@@ -27,7 +27,7 @@ The main website provides a browser-based interface for browsing products, compa
 
 A read-only REST API for programmatic access to pricing data.
 
-**Documentation:** [API Reference](./docs/api.md)
+**Documentation:** [API Reference](./api.md)
 
 **Quick start:**
 
@@ -59,7 +59,7 @@ selector. Retailer destination and affiliate URLs are not exposed.
 
 A Model Context Protocol (MCP) server for AI agents to query pricing data directly. Compatible with Claude, Cursor, GitHub Copilot, and any MCP-compatible client.
 
-**Documentation:** [MCP Server Reference](./docs/mcp.md)
+**Documentation:** [MCP Server Reference](./mcp.md)
 
 **Quick start (VS Code `mcp.json`):**
 
@@ -84,7 +84,7 @@ codex mcp add boostermage --url https://mcp.boostermage.com/mcp
 
 Publicly accessible JSON data files are available at `https://boostermage.com/data/`.
 
-**Documentation:** [Data Feeds](./docs/data-feeds.md)
+**Documentation:** [Data Feeds](./data-feeds.md)
 
 ## Registry
 
@@ -93,11 +93,6 @@ Boostermage is published on the [MCP Registry](https://registry.modelcontextprot
 ## Repository
 
 This documentation is maintained at **https://github.com/fmacpro/boostermage**.
-
-## Policies
-
-- [Terms of Service](./TERMS.md)
-- [Privacy & Analytics](https://boostermage.com/privacy)
 
 ---
 
